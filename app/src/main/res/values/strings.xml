@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">An♥Vinh</string>
+    <string name="lbl_set_profile_photo">Thiết lập ảnh</string>
+    <string name="lbl_take_camera_picture">Chụp ảnh</string>
+    <string name="lbl_choose_from_gallery">Chọn ảnh từ thư viện</string>
+</resources>

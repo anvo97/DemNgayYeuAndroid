@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/hinh_nen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3E000000" />
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/memory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/memory"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+
+            <TextView
+                android:id="@+id/an"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ANAN"
+                android:textColor="@color/colorWhite"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/an"
+                android:layout_toRightOf="@id/an"
+                android:scaleType="centerCrop"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                app:srcCompat="@drawable/heart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/heart"
+                android:layout_toRightOf="@id/heart"
+                android:text="ZINHZINH"
+                android:textColor="@color/colorWhite"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            app:srcCompat="@drawable/setting" />
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title"
+        android:layout_above="@id/layout_content" >
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_content">
+
+        <LinearLayout
+            android:id="@+id/layoutDotSlder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            >
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image_an"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:scaleType="centerInside"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/anzinh"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/name_an"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_an"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="ANAN"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_an"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/gender_an"
+                    android:layout_width="47dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/custom_border_circle_gender"
+                    android:padding="3dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/male"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerCrop"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/male" />
+
+                    <TextView
+                        android:id="@+id/tuoi_an"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toEndOf="@id/male"
+                        android:layout_toRightOf="@id/male"
+                        android:text="22"
+                        android:textColor="@color/colorWhite"
+                        android:layout_centerVertical="true"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_toEndOf="@id/gender_an"
+                    android:layout_toRightOf="@id/gender_an"
+                    android:background="@drawable/custom_border_circle_cung"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:id="@+id/cung_xu_nu"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerVertical="true"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:layout_marginLeft="2dp"
+                        app:srcCompat="@drawable/xunu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cung_xu_nu"
+                        android:layout_toRightOf="@id/cung_xu_nu"
+                        android:text="Xử Nữ"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/heart_animation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/heart_80" />
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image_zinh"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:scaleType="centerInside"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/anzinh"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/name_zinh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_zinh"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="ZINHZINH"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_zinh"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/gender_zinh"
+                    android:layout_width="47dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/custom_border_circle_gender"
+                    android:padding="3dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:id="@+id/female"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerCrop"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/female" />
+
+                    <TextView
+                        android:id="@+id/tuoi_zinh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toEndOf="@id/female"
+                        android:layout_toRightOf="@id/female"
+                        android:text="21"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_toEndOf="@id/gender_zinh"
+                    android:layout_toRightOf="@id/gender_zinh"
+                    android:background="@drawable/custom_border_circle_cung"
+                    android:padding="3dp">
+
+                    <ImageView
+                        android:id="@+id/cung_song_tu"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerVertical="true"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:layout_marginLeft="2dp"
+                        app:srcCompat="@drawable/songtu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cung_song_tu"
+                        android:layout_toRightOf="@id/cung_song_tu"
+                        android:text="Song Tử"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
